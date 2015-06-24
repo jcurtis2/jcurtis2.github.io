@@ -1,102 +1,131 @@
 
 html {
-    /* force a scrollbar to avoid jumps with short pages */
-    overflow-y: scroll;
+  /* force a scrollbar to avoid jumps with short pages */
+  overflow-y: scroll;
 }
 
 body {
-    background: #ffffff; /* #d0d0d0; */
-    
-    /* this is the text-align hack, see above */
-    text-align: center;
-    
-    margin:  0px 0px 0px 0px;
-    padding: 0px 0px 20px 0px; 
-    
-    font-size: 85%;
-    line-height: 1.5em;
-    font-family: Arial,Sans-serif;
+  background: #ffffff; /* #d0d0d0; */
+
+  /* this is the text-align hack, see above */
+  text-align: center;
+
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 20px 0px;
+
+  font-size: 85%;
+  line-height: 1.5em;
+  font-family: Arial,Sans-serif;
 }
 
 .content {
-    width:       770px;
-    
-    /* auto centers this within the body */
-    /* except for certain browsers, see the text-align hack */
-    margin:      10px  auto  0px   auto;
-    padding:     0px   0px  0px    0px;
-    
-    border-width: 0px; /* 1px; */
-    border-style: solid;
-    border-color: #808080;
-    
-    background: #ffffff;
-    
-    /* Again, the text-align hack, see above */
-    /* we reverse the effect of the text-align:center in body */
-    /* because text-align is inherited */
-    text-align:  left;
+  width: 770px;
+
+  /* auto centers this within the body */
+  /* except for certain browsers, see the text-align hack */
+  margin: 10px auto 0px auto;
+  padding: 0px 0px 0px 0px;
+
+  border-width: 0px; /* 1px; */
+  border-style: solid;
+  border-color: #808080;
+
+  background: #ffffff;
+
+  /* Again, the text-align hack, see above */
+  /* we reverse the effect of the text-align:center in body */
+  /* because text-align is inherited */
+  text-align:  left;
 }
 
 .main {
-    background: #ffffff;
-    
-    margin:         10px   10px  10px  10px;
-    border-width:   0px   0px  0px  0px;
-    padding:        0px   0px  0px  0px;
-    
-    border-style: solid;
-    border-color: #ff0000;
+  background: #ffffff;
+
+  margin: 10px 10px 10px 10px;
+  border-width: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+
+  border-style: solid;
+  border-color: #ff0000;
 }
 
-div.header {
-    background-color: #f0f0f0;
+header {
+  width: 770px;
+  background-color: #f0f0f0;
+  color: #00688b;
+  padding: 20px 10px 20px 10px;
+
+  margin: 10px auto 0px auto;
+  padding: 0px 0px 0px 0px;
+
+  border-width: 0px; /* 1px; */
+  border-style: solid;
+  border-color: #808080;
+
+  background: #ffffff;
+
+  /* Again, the text-align hack, see above */
+  /* we reverse the effect of the text-align:center in body */
+  /* because text-align is inherited */
+  text-align:  left;
+}
+header h1 {
+  background-color: #F0F0F0;
+  padding: .5em;
+
+  margin: 10px auto 0px auto;
+
+  font-size: 3em;
+  font-family: Arial;
+  font-weight: bold;
+}
+header a {
+  font-size: 1em;
+  font-family: Arial;
+  font-weight: bold;
 }
 
-.header {
-    color: #00688b;
-    padding:         20px   10px  20px  10px;
-    font-size: 250%;
-    font-family: Arial;
-    font-weight: bold;
+nav {
+  font-size: 120%
 }
-
-.navbar {
-    font-size: 120%;
+nav ul {
+  padding: 0;
+  margin: 0;
+  font-size: 0px; /* Required t make links stay together with no whitespace */
 }
-
-.navbar td.active {
-    background: #00688b;
+nav li {
+  display: inline-block;
+  margin: 0;
+  padding: 10px;
+  font-size: 18px; /* Actual font size */
 }
-
-.navbar td {
-    background: #98cce6;
+nav li.active {
+  background: #00688b;
 }
-
-.navbar :link {
-    color: black;
-    text-decoration: none;
+nav li {
+  background: #98cce6;
 }
-
-.navbar :visited {
-    color: black;
-    text-decoration: none;
+nav :link {
+  color: black;
+  text-decoration: none;
 }
-
-.navbar td.active :link {
-    color: #ffffff;
-    text-decoration: none;
+nav :visited {
+  color: black;
+  text-decoration: none;
 }
-
-.navbar td.active :visited {
-    color: #ffffff;
-    text-decoration: none;
+nav li.active :link {
+  color: #ffffff;
+  text-decoration: none;
+}
+nav li.active :visited {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 a:link {
-    color: #236b8e;
+  color: #236b8e;
 }
 
 a:visited {
-    color: #325c74;
+  color: #325c74;
 }
