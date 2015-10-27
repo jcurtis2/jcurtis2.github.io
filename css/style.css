@@ -12,19 +12,19 @@ body {
 
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 20px 0px;
-
-  font-size: 85%;
+  /*padding-top: 70px; */
   line-height: 1.5em;
   font-family: Arial,Sans-serif;
 }
 
 .content {
-  width: 770px;
-
+  width: auto;
   /* auto centers this within the body */
   /* except for certain browsers, see the text-align hack */
-  margin: 10px auto 0px auto;
-  padding: 0px 0px 0px 0px;
+  /* top right bottom left */
+  /*margin: 40px 40px 40px 40px; */
+  margin: 40px 2% 40px 2%;
+  padding: 2%; /*0px 0px 0px 0px; */
 
   border-width: 0px; /* 1px; */
   border-style: solid;
@@ -83,43 +83,6 @@ header a {
   font-size: 1em;
   font-family: Arial;
   font-weight: bold;
-}
-
-nav {
-  font-size: 120%
-}
-nav ul {
-  padding: 0;
-  margin: 0;
-  font-size: 0px; /* Required t make links stay together with no whitespace */
-}
-nav li {
-  display: inline-block;
-  margin: 0;
-  padding: 10px;
-  font-size: 18px; /* Actual font size */
-}
-nav li.active {
-  background: #00688b;
-}
-nav li {
-  background: #98cce6;
-}
-nav :link {
-  color: black;
-  text-decoration: none;
-}
-nav :visited {
-  color: black;
-  text-decoration: none;
-}
-nav li.active :link {
-  color: #ffffff;
-  text-decoration: none;
-}
-nav li.active :visited {
-  color: #ffffff;
-  text-decoration: none;
 }
 
 a:link {

@@ -1,49 +1,117 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>PartMC</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
+
+
   <body>
 
-    <header>
-      <h1>PartMC</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="active"><a href="publications.html">Publications</a></li>
-          <li><a href="previous.html">Previous Releases</a></li>
-          <li><a href="examples.html">Examples</a></li>
-        </ul>
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">PartMC</a> 
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="examples.html">About</a></li>
+              <li><a href="previous.html">Releases</a></li>
+              <li class="active"><a href="publications.html">Publications</a></li>             
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
       </nav>
-    </header>
 
     <div class="content">
       <div class="main">
         <h1>Publications:</h1>
         <ol reversed>
-	  <li> L.&nbsp;Fierce, N.&nbsp;Riemer, T.&nbsp;C.&nbsp;Bond, <a href="pubs/FiRiBo2015.html">Explaining variance in black carbon's aging timescale</a>, <i>Atmospheric Chemistry and Physics</i>, <b>15</b>, 3173-3191, 2015.</li>
-	  <li>J.&nbsp;C.&nbsp;Kaiser, J.&nbsp;Hendricks, M.&nbsp;Righi, N.&nbsp;Riemer, R.&nbsp;A.&nbsp;Zaveri, S.&nbsp;Metzger, V.&nbsp;Aquila, The MESSy submodel MADE3 (v2.0B): Description and a box model test, <i>Geoscientific Model Development</i>, <b>7</b>, 1137-1157, 2014.</li>
-          <li> J.&nbsp;Tian, N.&nbsp;Riemer, M.&nbsp;West, L.&nbsp;Pfaffenberger, H.&nbsp;Schlager, and A.&nbsp;Petzold, <a href="pubs/TiRiEtAl2014.html">Modeling the evolution of aerosol particles in a ship plume using PartMC-MOSAIC</a>, <i>Atmospheric Chemistry and Physics</i> <b>14</b>, 5327-5347, 2014.</li>
-          	  <li>L.&nbsp;Fierce, N.&nbsp;Riemer, T.&nbsp;C.&nbsp;Bond, <a href="pubs/FiRiBo2013.html"> When is cloud condensation nuclei activity sensitive to particle characteristics at emission?</a>, <i>Journal of  Geophysical Research</i>, <b>118</b>(24), 13476-13488, 2013.</li>
-          <li> N.&nbsp;Riemer and M.&nbsp;West, <a href="pubs/RiWe2013.html">Quantifying aerosol mixing state with entropy and diversity measures</a>, <i>Atmospheric Chemistry and Physics</i> <b>13</b>, 11423-11439, 2013.</li>
-          <li> M.&nbsp;D.&nbsp;Michelotti, M.&nbsp;T.&nbsp;Heath, and M.&nbsp;West, <a href="pubs/MiHeWe2013.html">Binning for efficient stochastic multiscale particle simulations</a>, <i>Multiscale Modeling & Simulation</i> <b>11</b>(4), 1071-1096, 2013.</li>
-          <li> J.&nbsp;Ching, N.&nbsp;Riemer, and M.&nbsp;West, <a href="pubs/ChRiWe2012.html">Impacts of black carbon mixing state on black carbon nucleation scavenging: Insights from a particle-resolved model</a>, <i>Journal of Geophysical Research</i> <b>117</b>(D23209), 2012.</li>
-	  <li> N.&nbsp;Ma, C.&nbsp;S. Zhao, T.&nbsp;Muller, Y.&nbsp;F. Cheng, P.&nbsp;F. Liu, Z.&nbsp;Z. Deng, W.&nbsp;Y. Xu et al., A new method to determine the mixing state of light absorbing carbonaceous using the measured aerosol optical properties and number size distributions, <i>Atmospheric Chemistry and Physics</i>, <b>11</b> 27475-27519, 2011.
-	  <li> P.&nbsp;F. Liu, C.&nbsp;S. Zhao, T.&nbsp;Gobel, E.&nbsp;Hallbauer, A.&nbsp;Nowak, L.&nbsp;Ran, W.&nbsp;Y. Xu et al., Hygroscopic properties of aerosol particles at high relative humidity and their diurnal variations in the North China Plain, <i>Atmospheric Chemistry and Physics</i>, <b>11</b>, 3479-3494, 2011.
-          <li> R.&nbsp;E.&nbsp;L.&nbsp;DeVille, N.&nbsp;Riemer, and M.&nbsp;West, <a href="pubs/DeRiWe2011.html">Weighted Flow Algorithms (WFA) for stochastic particle coagulation</a>, <i>Journal of Computational Physics</i> <b>230</b>(23), 8427-8451, 2011.</li>
-          <li> R.&nbsp;A.&nbsp;Zaveri, J.&nbsp;C.&nbsp;Barnard, R.&nbsp;C.&nbsp;Easter, N.&nbsp;Riemer, and M.&nbsp;West, <a href="pubs/ZaBaEaRiWe2010.html">Particle-resolved simulation of aerosol size,
-               composition, mixing state, and the associated optical and cloud
-               condensation nuclei activation properties in an evolving urban
-               plume</a>, <i>Journal of Geophysical Research</i> <b>115</b>(D17210), 2010.</li>
-          <li> N.&nbsp;Riemer, M.&nbsp;West, R.&nbsp;A.&nbsp;Zaveri, and R.&nbsp;C.&nbsp;Easter, <a href="pubs/RiWeZaEa2010.html">Estimating black carbon aging time-scales with a particle-resolved aerosol model</a>, <i>Journal of Aerosol Science</i> <b>41</b>(1), 143-158, 2010.</li>
-          <li> N.&nbsp;Riemer, M.&nbsp;West, R.&nbsp;A.&nbsp;Zaveri, and R.&nbsp;C.&nbsp;Easter, <a href="pubs/RiWeZaEa2009.html">Simulating the evolution of soot mixing state with a particle-resolved aerosol model</a>, <i>Journal of Geophysical Research</i> <b>114</b>(D09202), 2009.</li>
-          <li> R.&nbsp;McGraw, L.&nbsp;Leng, W.&nbsp;Zhu, N.&nbsp;Riemer, and M.&nbsp;West, <a href="pubs/McLeZhRiWe2008.html">Aerosol dynamics using the quadrature method of moments:
-               Comparing several quadrature schemes with particle-resolved
-               simulation</a>, <i>Journal of Physics: Conference Series</i> <b>125</b>(012020), 2008.</li>
+           <li> L.&nbsp;Fierce, N.&nbsp;Riemer, T.&nbsp;C.&nbsp;Bond,
+	     <a href="http://dx.doi.org/10.5194/acp-15-3173-2015">Explaining variance in black carbon's aging timescale</a>,
+	     <i>Atmospheric Chemistry and Physics</i>, <b>15</b>, 3173-3191, doi:10.5194/acp-15-3173-2015, 2015. (<a href="pubs/FiRiBo2015.pdf">PDF</a>)</li>
+	<li>J.&nbsp;C.&nbsp;Kaiser, J.&nbsp;Hendricks, M.&nbsp;Righi, N.&nbsp;Riemer, R.&nbsp;A.&nbsp;Zaveri, S.&nbsp;Metzger, V.&nbsp;Aquila,
+	   <a href="http://dx.doi.org/10.5194/gmd-7-1137-2014">The MESSy submodel MADE3 (v2.0B): Description and a box model test</a>,
+	   <i>Geoscientific Model Development</i>, <b>7</b>, 1137-1157, doi:10.5194/gmd-7-1137-2014, 2014.</li>
+	
+          <li> J.&nbsp;Tian, N.&nbsp;Riemer, M.&nbsp;West, L.&nbsp;Pfaffenberger, H.&nbsp;Schlager, and A.&nbsp;Petzold,
+             <a href="http://dx.doi.org/10.5194/acp-14-5327-2014">Modeling the evolution of aerosol particles in a ship plume using PartMC-MOSAIC</a>,
+             <i>Atmospheric Chemistry and Physics</i> <b>14</b>, 5327-5347,  doi:10.5194/acp-14-5327-2014, 2014. (<a href="pubs/TiRiEtAl2014.pdf">PDF</a>)</li>
+          
+          	<li>L.&nbsp;Fierce, N.&nbsp;Riemer, T.&nbsp;C.&nbsp;Bond,
+          	   <a href="http://dx.doi.org/10.1002/2013JD020608"> When is cloud condensation nuclei activity sensitive to particle characteristics at emission?</a>,
+          	   <i>Journal of  Geophysical Research</i>, <b>118</b>(24), 13476-13488, doi:10.1002/2013JD020608, 2013. (<a href="pubs/FiRiBo2013.pdf">PDF</a>)</li>
+          	
+          <li> N.&nbsp;Riemer and M.&nbsp;West,
+             <a href="http://dx.doi.org/10.5194/acp-13-11423-2013">Quantifying aerosol mixing state with entropy and diversity measures</a>,
+             <i>Atmospheric Chemistry and Physics</i> <b>13</b>, 11423-11439, doi:10.5194/acp-13-11423-2013, 2013. (<a href="pubs/RiWe2013.pdf">PDF</a>)</li>
+             
+          <li> M.&nbsp;D.&nbsp;Michelotti, M.&nbsp;T.&nbsp;Heath, and M.&nbsp;West,
+             <a href="http://dx.doi.org/10.1137/130908038">Binning for efficient stochastic multiscale particle simulations</a>,
+             <i>Multiscale Modeling & Simulation</i> <b>11</b>(4), 1071-1096, doi:10.1137/130908038, 2013. (<a href="pubs/MiHeWe2013.pdf">PDF</a>)</li>
+          
+          <li> J.&nbsp;Ching, N.&nbsp;Riemer, and M.&nbsp;West, 
+             <a href="http://dx.doi.org/10.1029/2012JD018269">Impacts of black carbon mixing state on black carbon nucleation scavenging: Insights from a particle-resolved model</a>,
+             <i>Journal of Geophysical Research</i> <b>117</b>(D23209), 2012. (<a href="pubs/ChRiWe2012.pdf">PDF</a>)</li>
+             
+	<li> N.&nbsp;Ma, C.&nbsp;S. Zhao, T.&nbsp;Muller, Y.&nbsp;F. Cheng, P.&nbsp;F. Liu, Z.&nbsp;Z. Deng, W.&nbsp;Y. Xu et al., 
+	   <a href="http://dx.doi.org/10.5194/acp-12-2381-2012"> A new method to determine the mixing state of light absorbing carbonaceous using the measured aerosol optical properties and number size distributions</a>,
+	   <i>Atmospheric Chemistry and Physics</i>, <b>11</b> 27475-27519, doi:10.5194/acp-12-2381-2012, 2012.</li>
+	   
+	<li> P.&nbsp;F. Liu, C.&nbsp;S. Zhao, T.&nbsp;Gobel, E.&nbsp;Hallbauer, A.&nbsp;Nowak, L.&nbsp;Ran, W.&nbsp;Y. Xu et al.,
+	   <a href="http://dx.doi.org/10.5194/acp-11-3479-2011"> Hygroscopic properties of aerosol particles at high relative humidity and their diurnal variations in the North China Plain</a>,
+	   <i>Atmospheric Chemistry and Physics</i>, <b>11</b>, 3479-3494, doi:10.5194/acp-11-3479-2011, 2011.</li>
+	   
+          <li> R.&nbsp;E.&nbsp;L.&nbsp;DeVille, N.&nbsp;Riemer, and M.&nbsp;West,
+             <a href="http://dx.doi.org/10.1016/j.jcp.2011.07.027">Weighted Flow Algorithms (WFA) for stochastic particle coagulation</a>,
+             <i>Journal of Computational Physics</i> <b>230</b>(23), 8427-8451, doi:10.1016/j.jcp.2011.07.027, 2011. (<a href="pubs/DeRiWe2011.pdf">PDF</a>)</li>
+             
+          <li> R.&nbsp;A.&nbsp;Zaveri, J.&nbsp;C.&nbsp;Barnard, R.&nbsp;C.&nbsp;Easter, N.&nbsp;Riemer, and M.&nbsp;West,
+             <a href="http://dx.doi.org/10.1029/2009JD013616">Particle-resolved simulation of aerosol size, composition, mixing state, and the associated optical and cloud condensation nuclei activation properties in an evolving urban plume</a>,
+             <i>Journal of Geophysical Research</i> <b>115</b>(D17210), doi:10.1029/2009JD013616, 2010. (<a href="pubs/ZaBaEaRiWe2010.pdf">PDF</a>)</li>
+             
+          <li> N.&nbsp;Riemer, M.&nbsp;West, R.&nbsp;A.&nbsp;Zaveri, and R.&nbsp;C.&nbsp;Easter,
+             <a href="http://dx.doi.org/10.1016/j.jaerosci.2009.08.009">Estimating black carbon aging time-scales with a particle-resolved aerosol model</a>,
+             <i>Journal of Aerosol Science</i> <b>41</b>(1), 143-158, doi:10.1016/j.jaerosci.2009.08.009, 2010. (<a href="pubs/RiWeZaEa2010.pdf">PDF</a>)</li>
+             
+          <li> N.&nbsp;Riemer, M.&nbsp;West, R.&nbsp;A.&nbsp;Zaveri, and R.&nbsp;C.&nbsp;Easter,
+             <a href="http://dx.doi.org/10.1029/2008JD011073">Simulating the evolution of soot mixing state with a particle-resolved aerosol model</a>,
+             <i>Journal of Geophysical Research</i> <b>114</b>(D09202), doi:10.1029/2008JD011073, 2009. (<a href="pubs/RiWeZaEa2009.pdf">PDF</a>)</li>
+             
+          <li> R.&nbsp;McGraw, L.&nbsp;Leng, W.&nbsp;Zhu, N.&nbsp;Riemer, and M.&nbsp;West,
+             <a href="http://dx.doi.org/10.1088/1742-6596/125/1/012020">Aerosol dynamics using the quadrature method of moments:
+               Comparing several quadrature schemes with particle-resolved simulation</a>,
+               <i>Journal of Physics: Conference Series</i> <b>125</b>(012020), doi:10.1088/1742-6596/125/1/012020, 2008. (<a href="pubs/McLeZhRiWe2008.pdf">PDF</a>)</li>
         </ol>
       </div>
     </div>
   </body>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 </html>
