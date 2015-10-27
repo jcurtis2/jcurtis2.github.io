@@ -18,12 +18,13 @@ body {
 }
 
 .content {
-  width: 770px;
-
+  width: auto;
   /* auto centers this within the body */
   /* except for certain browsers, see the text-align hack */
-  margin: 10px auto 0px auto;
-  padding: 0px 0px 0px 0px;
+  /* top right bottom left */
+  /*margin: 40px 40px 40px 40px; */
+  margin: 40px 2% 40px 2%;
+  padding: 2%; /*0px 0px 0px 0px; */
 
   border-width: 0px; /* 1px; */
   border-style: solid;
