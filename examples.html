@@ -47,7 +47,80 @@
 
     <div class="content">
       <div class="main">
-        <h1>PartMC Examples</h1>
+        <h1>Atmospheric Aerosols: A multiscale problem</h1>
+	<p>
+	The aerosol representation in models is an issue because the
+	macroscopic impacts of aerosol particles on the radiative
+	balance of the Earth, on clouds and on human health are
+	ultimatively tied to processes that occur on the per-particle
+	level. Field observations show that individual aerosol
+	particles are a complex mixture of a wide variety of species,
+	such as soluble inorganic salts and acids, insoluble crustal
+	materials, trace metals, and carbonaceous materials. This
+	reflects differences in their sources, but also differences in
+	the chemical and physical transformations that the particles
+	undergo in the atmosphere. This represents a great challenge
+	for current chemical transport models, since the computational
+	resources to resolve this much detail are
+	limited. Simplifications are therefore necessary, however we
+	often do not know the uncertainties that are introduced by
+	such practise.
+	</p>
+	<h1>Particle-resolved aerosol models</h1>
+	<p>
+	  <p>
+	  The question of how to represent aerosol in models
+	  has led us to develop the stochastic particle-resolved
+	  model <a href="http://lagrange.mechse.illinois.edu/mwest/partmc/">PartMC</a>-MOSAIC. This
+	  aerosol model is designed to resolve the composition of
+	  individual aerosol particles.
+	  </p>
+	  <p>
+	  This figure shows how we conceptually think of a particle
+	  population: Particles live in a high-dimensional composition
+	  space where each model species represents one
+	  dimension. With time the particles move through this space
+	  as a result of various processes that act on them. We sample
+	  the aerosol distribution using a large number of
+	  computational particles and evolve them using the
+	  appropriate probabilities for coagulation, interleaved with
+	  deterministic processes such as condensation of secondary
+	  aerosol species. This has the advantage of tracking particle
+	  composition without making any approximating assumptions.
+	  </p>
+
+	 
+
+	<p>We use this model for different purposes:
+          <ul>
+            <li>
+              As a benchmark and error quantification tool for more
+              approximate models, for example sectional, moment or
+              modal models.
+            </li>
+            <li>
+	      As a coarse graining tool for deriving parameters for
+	      more approximate models.
+            </li>
+	    <li>
+	      As a modeling tool to perform detailed studies on the
+	      particle scale and for experimental intercomparison.
+            </li>
+          </ul>
+	</p>
+
+	<p>
+	  This figure shows an example of a two-dimensional projection
+	      of the particle number distribution from a
+	      particle-resolved simulation. In this case we use
+	      particle size and black carbon mass fraction as
+	      independent variables, and we see that particles at a
+	      given size can have a wide range of black carbon mass
+	      fractions. The inset shows that we can even obtain more
+	      detailed information on an individual particle level,
+	      for example the source information of any particle in the
+	      population, or its composition.
+	      </p>
       </div>
     </div>
   </body>
