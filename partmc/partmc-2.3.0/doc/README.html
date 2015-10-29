@@ -1,0 +1,171 @@
+<html>
+<head><title>PartMC 2.3.0</title></head>
+<body bgcolor="#ffffff">
+<h1>PartMC</h1>
+
+<p>PartMC: Particle-resolved Monte Carlo code for atmospheric aerosol simulation</p>
+
+<p>Version 2.3.0 <br />
+Released 2015-03-29</p>
+
+<p><a href="http://lagrange.mechse.illinois.edu/partmc/">http://lagrange.mechse.illinois.edu/partmc/</a></p>
+
+<p>References:</p>
+
+<ul>
+<li>N. Riemer, M. West, R. A. Zaveri, and R. C. Easter (2009),
+ Simulating the evolution of soot mixing state with a
+ particle-resolved aerosol model, <em>J. Geophys. Res.</em> 114(D09202),
+ <a href="http://dx.doi.org/10.1029/2008JD011073">http://dx.doi.org/10.1029/2008JD011073</a>.</li>
+<li>N. Riemer, M. West, R. A. Zaveri, and R. C. Easter (2010),
+ Estimating black carbon aging time-scales with a
+ particle-resolved aerosol model, <em>J. Aerosol Sci.</em> 41(1), 143-158,
+ <a href="http://dx.doi.org/10.1016/j.jaerosci.2009.08.009">http://dx.doi.org/10.1016/j.jaerosci.2009.08.009</a>.</li>
+<li>R. A. Zaveri, J. C. Barnard, R. C. Easter, N. Riemer, and M. West
+ (2010), Particle-resolved simulation of aerosol size,
+ composition, mixing state, and the associated optical and cloud
+ condensation nuclei activation properties in an evolving urban
+ plume, <em>J. Geophys. Res.</em> 115(D17210),
+ <a href="http://dx.doi.org/10.1029/2009JD013616">http://dx.doi.org/10.1029/2009JD013616</a>.</li>
+<li>R. E. L. DeVille, N. Riemer, and M. West, Weighted Flow
+ Algorithms (WFA) for stochastic particle coagulation,
+ <em>J. Comp. Phys.</em> 230(23), 8427-8451, 2011,
+ <a href="http://dx.doi.org/10.1016/j.jcp.2011.07.027">http://dx.doi.org/10.1016/j.jcp.2011.07.027</a></li>
+<li>J. Ching, N. Riemer, and M. West, Impacts of black carbon mixing
+ state on black carbon nucleation scavenging: Insights from a
+ particle-resolved model, <em>J. Geophys. Res.</em> 117(D23209), 2012,
+ <a href="http://dx.doi.org/10.1029/2012JD018269">http://dx.doi.org/10.1029/2012JD018269</a></li>
+<li>M. D. Michelotti, M. T. Heath, and M. West, Binning for efficient
+ stochastic multiscale particle simulations, <em>Atmos. Chem. Phys.</em>
+ 11(4), 1071-1096, 2013, <a href="http://dx.doi.org/10.1137/130908038">http://dx.doi.org/10.1137/130908038</a></li>
+<li>N. Riemer and M. West, Quantifying aerosol mixing state with
+ entropy and diversity measures, <em>Atmos. Chem. Phys.</em> 13,
+ 11423-11439, 2013, <a href="http://dx.doi.org/10.5194/acp-13-11423-2013">http://dx.doi.org/10.5194/acp-13-11423-2013</a></li>
+<li>J. Tian, N. Riemer, M. West, L. Pfaffenberger, H. Schlager, and
+ A. Petzold, Modeling the evolution of aerosol particles in a ship
+ plume using PartMC-MOSAIC, <em>Atmos. Chem. Phys.</em> 14, 5327-5347,
+ 2014, <a href="http://dx.doi.org/10.5194/acp-14-5327-2014">http://dx.doi.org/10.5194/acp-14-5327-2014</a></li>
+</ul>
+
+<p>Copyright (C) 2005-2015 Nicole Riemer and Matthew West <br />
+Portions copyright (C) Andreas Bott, Richard Easter, and Jeffrey Curtis <br />
+Licensed under the GNU General Public License version 2 or (at your
+option) any later version. <br />
+For details see the file COPYING or
+<a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a>.</p>
+
+<h1>Dependencies</h1>
+
+<p>Required dependencies:</p>
+
+<ul>
+<li>Fortran 2003 compiler - <a href="https://gcc.gnu.org/fortran/">https://gcc.gnu.org/fortran/</a> or similar</li>
+<li>CMake version 2.6.4 or higher - <a href="http://www.cmake.org/">http://www.cmake.org/</a></li>
+<li>NetCDF version 4.2 or higher -
+ <a href="http://www.unidata.ucar.edu/software/netcdf/">http://www.unidata.ucar.edu/software/netcdf/</a></li>
+</ul>
+
+<p>Optional dependencies:</p>
+
+<ul>
+<li>MOSAIC chemistry code version 2012-01-25 - Available from Rahul
+ Zaveri - <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;R&#x61;h&#x75;&#x6c;&#x2e;&#90;&#x61;&#118;&#101;&#x72;&#105;&#x40;&#112;&#110;&#108;&#x2e;&#x67;&#x6f;&#x76;">R&#x61;h&#x75;&#x6c;&#x2e;&#90;&#x61;&#118;&#101;&#x72;&#105;&#x40;&#112;&#110;&#108;&#x2e;&#x67;&#x6f;&#x76;</a></li>
+<li>MPI parallel support - <a href="http://www.open-mpi.org/">http://www.open-mpi.org/</a></li>
+<li>GSL for random number generators -
+ <a href="http://www.gnu.org/software/gsl/">http://www.gnu.org/software/gsl/</a></li>
+<li>SUNDIALS ODE solver version 2.4 for condensation support -
+ <a href="http://www.llnl.gov/casc/sundials/">http://www.llnl.gov/casc/sundials/</a></li>
+<li>gnuplot for testcase plotting - <a href="http://www.gnuplot.info/">http://www.gnuplot.info/</a></li>
+</ul>
+
+<h1>Installation</h1>
+
+<ol>
+<li><p>Install cmake and NetCDF (see above). The NetCDF libraries are
+required to compile PartMC. The <code>netcdf.mod</code> Fortran 90 module file
+is required, and it must be produced by the same compiler being
+used to compile PartMC.</p></li>
+<li><p>Unpack PartMC:</p>
+
+<pre><code>tar xzvf partmc-2.3.0.tar.gz
+</code></pre></li>
+<li><p>Change into the main PartMC directory (where this README file is
+located):</p>
+
+<pre><code>cd partmc-2.3.0
+</code></pre></li>
+<li><p>Make a directory called <code>build</code> and change into it:</p>
+
+<pre><code>mkdir build
+cd build
+</code></pre></li>
+<li><p>If necessary, set environment variables to indicate the install
+locations of supporting libraries. If running <code>echo $SHELL</code>
+indicates that you are running <code>bash</code>, then you can do something
+like:</p>
+
+<pre><code>export NETCDF_HOME=/
+export MOSAIC_HOME=${HOME}/mosaic-2012-01-25
+export SUNDIALS_HOME=${HOME}/opt
+export GSL_HOME=${HOME}/opt
+</code></pre>
+
+<p>Of course the exact directories will depend on where the libraries
+are installed. You only need to set variables for libraries
+installed in non-default locations, and only for those libraries
+you want to use.</p>
+
+<p>If <code>echo $SHELL</code> instead is <code>tcsh</code> or similar, then the environment
+variables can be set like <code>setenv NETCDF_HOME /</code> and similarly.</p></li>
+<li><p>Run cmake with the main PartMC directory as an argument (note the
+double-c):</p>
+
+<pre><code>ccmake ..
+</code></pre></li>
+<li><p>Inside ccmake press <code>c</code> to configure, edit the values as needed,
+press <code>c</code> again, then <code>g</code> to generate. Optional libraries can be
+activated by setting the <code>ENABLE</code> variable to <code>ON</code>. For a parallel
+build, toggle advanced mode with <code>t</code> and set the
+<code>CMAKE_Fortran_COMPILER</code> to <code>mpif90</code>, then reconfigure.</p></li>
+<li><p>Compile PartMC and test it as follows. Some tests may fail due to
+bad random initial conditions, so re-run the tests a few times to
+see if failures persist.</p>
+
+<pre><code>make
+make test
+</code></pre></li>
+<li><p>To run just a single set of tests do something like:</p>
+
+<pre><code>ctest -R bidisperse   # argument is a regexp for test names
+</code></pre></li>
+<li><p>To see what make is doing run it like:</p>
+
+<pre><code>VERBOSE=1 make
+</code></pre></li>
+<li><p>To run tests with visible output or to make some plots from the
+tests run them as:</p>
+
+<pre><code>cd test_run/emission
+./test_emission_1.sh
+./test_emission_2.sh
+./test_emission_3.sh            # similarly for other tests
+gnuplot -persist plot_species.gnuplot # etc...
+</code></pre></li>
+<li><p>To run full scenarios, do, for example:</p>
+
+<pre><code>cd ../scenarios/1_urban_plume
+./run.sh
+</code></pre></li>
+</ol>
+
+<h1>Usage</h1>
+
+<p>The main <code>partmc</code> command reads <code>.spec</code> files and does the run
+specified therein. Either particle-resolved runs, sectional-code runs,
+or exact solutions can be generated. A run produces one NetCDF file
+per output timestep, containing per-particle data (from
+particle-resolved runs) or binned data (from sectional or exact
+runs). The <code>extract_*</code> programs can read these per-timestep NetCDF
+files and output ASCII data (the <code>extract_sectional_*</code> programs are
+used for sectional and exact model output).</p>
+</body></html>

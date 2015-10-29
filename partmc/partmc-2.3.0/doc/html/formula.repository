@@ -1,0 +1,200 @@
+\form#0:$ dN(r)/d\ln r $
+\form#1:$ dM(r,s)/d\ln r $
+\form#2:$N$
+\form#3:$\rm s^{-1}$
+\form#4:$N_{\rm back}$
+\form#5:$\dot{N} = r N_{\rm back} - r N$
+\form#6:$r$
+\form#7:$t_i$
+\form#8:$r_i$
+\form#9:$a_i$
+\form#10:$i = 1,\ldots,n$
+\form#11:$t_{i+1}$
+\form#12:$r_i a_i$
+\form#13:$t_1$
+\form#14:$r_1 a_1$
+\form#15:$t_n$
+\form#16:$r_n a_n$
+\form#17:\[ n(v) = \frac{1}{\rm mean-vol} \exp(- v / {\rm mean-vol}) \]
+\form#18:$N + 1$
+\form#19:$r_1,\ldots,r_{N+1}$
+\form#20:$r_i < r_{i+1}$
+\form#21:$C_1,\ldots,C_N$
+\form#22:$C_i$
+\form#23:$[r_i, r_{i+1}]$
+\form#24:\[ n(\log D) {\rm d}\log D = \frac{N_{\rm total}}{\sqrt{2\pi} \log \sigma_{\rm g}} \exp\left(\frac{(\log D - \log D_{\rm gn})^2}{2 \log ^2 \sigma_{\rm g}}\right) {\rm d}\log D \]
+\form#25:$N_{\rm total}$
+\form#26:$D_{\rm gn}$
+\form#27:$\log_{10}$
+\form#28:$\sigma_{\rm g}$
+\form#29:\[ n(v) {\rm d}v = \frac{N_{\rm total}}{v_{\rm \mu}} \exp\left(- \frac{v}{v_{\rm \mu}}\right) {\rm d}v \]
+\form#30:$D_{\rm \mu}$
+\form#31:$v_{\rm \mu} = \frac{\pi}{6} D^3_{\rm \mu}$
+\form#32:$D_0$
+\form#33:$R_0$
+\form#34:$D_0 = 2 R_0$
+\form#35:$f(D)$
+\form#36:\[ f(D) = D^6 + c_4 D^4 + c_3 D^3 + c_0, \]
+\form#37:$c_4 < 0$
+\form#38:$c_3 < 0$
+\form#39:$c_0 > 0$
+\form#40:$D > D_{\rm dry}$
+\form#41:\[ f'(D) = 6 D^5 + 4 c_4 D^3 + 3 c_3 D^2 = (3 D^2 + 4 c_4) D^3 + (D^3 + c_3) 3 D^2. \]
+\form#42:$D > (-4 c_4 / 3)^{1/2}$
+\form#43:$D > (-c_3)^{1/3}$
+\form#44:\[ D_0 = max((-4 c_4 / 3)^{1/2}, (-c_3)^{1/3}) \]
+\form#45:$f'(D) > 0$
+\form#46:$D > D_0$
+\form#47:\[ f''(D) = 30 D^4 + 12 c_4 D^2 + 6 c_3 D = (5 D^2 + 4 c_4) 3 D^2 + (5 D^3 + 2 c_3) 3 D, \]
+\form#48:$f''(D) > 0$
+\form#49:$D > (-4 c_4 / 5)^{1/2}$
+\form#50:$D > (-2 c_3 / 5)^{1/3}$
+\form#51:$n(D)$
+\form#52:\[ n(D) = w(D) c(D) \]
+\form#53:$w(D)$
+\form#54:$c(D)$
+\form#55:$D$
+\form#56:$w(D) = 1$
+\form#57:$w(D) = D^\alpha$
+\form#58:$w(D) = D^{-3}$
+\form#59:$\alpha$
+\form#60:$w(D) = (D/D_0)^\alpha$
+\form#61:$w(D) = (D/D_0)^{-3}$
+\form#62:$n_{\rm bin}$
+\form#63:$c_i$
+\form#64:$i = 1,\ldots,n_{\rm bin}$
+\form#65:$e_i$
+\form#66:$i = 1,\ldots,(n_{\rm bin} + 1)$
+\form#67:$e_{i+1}/e_i$
+\form#68:$c_i/e_i = \sqrt{e_{i+1}/e_i}$
+\form#69:$\ln(e_i)$
+\form#70:$\ln(c_i)$
+\form#71:$e_1$
+\form#72:$e_{n_{\rm bin} + 1}$
+\form#73:$R$
+\form#74:$N_0$
+\form#75:$v_\mu = \frac{4\pi}{3} R^3$
+\form#76:$\tau = N_0 v_\mu \beta_1 t$
+\form#77:$T = 1 - e^{-\tau}$
+\form#78:$\beta_1$
+\form#79:\[ n(D,t) \ {\rm d}\ln D = \frac{\pi}{2} D^3 \frac{N_0}{v} \frac{1 - T}{\sqrt{T}} \exp\left(-(1 + T) \frac{v}{v_\mu}\right) I_1\left(2 \frac{v}{v_\mu} \sqrt{T}\right) {\rm d}\ln D \]
+\form#80:$I_1(x)$
+\form#81:$v = \frac{\pi}{6} D^3$
+\form#82:$x$
+\form#83:$I_1(x) \approx \frac{x}{2}$
+\form#84:\[ n(D,t) \ {\rm d}\ln D = \frac{\pi}{2} D^3 \frac{N_0}{v_\mu} \exp\left(-\frac{v}{v_\mu}\right) {\rm d}\ln D \]
+\form#85:$ I_1(x) $
+\form#86:$\tau = N_0 \beta_0 t$
+\form#87:$\beta_0$
+\form#88:$\lambda = 1$
+\form#89:\[ n(D,t) \ {\rm d}\ln D = \frac{\pi}{2} D^3 \frac{N_0}{v_\mu} \frac{4}{(\tau + 2)^2} \exp\left(-\frac{v}{v_\mu} \frac{2}{\tau + 2} \exp(-\lambda \tau) - \lambda \tau\right) {\rm d}\ln D \]
+\form#90:$n(D,t)$
+\form#91:$t$
+\form#92:\[ \frac{d n(D,t)}{dt} = k_{\rm emit} n_{\rm emit}(D) + (k_{\rm dilute} + k_{\rm loss}(D)) (n_{\rm back}(D) - n(D,t)) \]
+\form#93:$ n(D,0) = n_0(D) $
+\form#94:$n_{\rm emit}(D)$
+\form#95:$n_{\rm back}(D)$
+\form#96:$k_{\rm emit}$
+\form#97:$k_{\rm dilute}$
+\form#98:$k_{\rm loss}(D)$
+\form#99:$t = 0$
+\form#100:\[ n(D,t) = n_{\infty}(D) + (n_0(D) - n_{\infty}(D)) \exp( -(k_{\rm dilute} + k_{\rm loss}(D)) t) \]
+\form#101:\[ n_{\infty}(D) = n(D,\infty) = n_{\rm back}(D) + \frac{k_{\rm emit}}{k_{\rm dilute} + k_{\rm loss}(D)} n_{\rm emit}(D) \]
+\form#102:$ T $
+\form#103:$ p $
+\form#104:$ D_i $
+\form#105:$ H $
+\form#106:$ (D_1,\ldots,D_n,H) $
+\form#107:$(I - \gamma J) x = b$
+\form#108:$J$
+\form#109:$\gamma$
+\form#110:$b$
+\form#111:$A$
+\form#112:$g_i$
+\form#113:$r_i g_i$
+\form#114:$r_1 g_1$
+\form#115:$r_n g_n$
+\form#116:$\rm H_2SO_4$
+\form#117:$\rm SO_2$
+\form#118:$4\times 10^{-9}\rm\ mol\ m^{-2}\ s^{-1}$
+\form#119:$2.8\times 10^{-9}\rm\ mol\ m^{-2}\ s^{-1}$
+\form#120:$5\times 10^{-9}\rm\ mol\ m^{-2}\ s^{-1}$
+\form#121:$i$
+\form#122:$j$
+\form#123:$k$
+\form#124:$\mathbb{Z} \to \mathbb{Z} \times \mathbb{Z}$
+\form#125:$\{1, \ldots, N_{\rm d}\}$
+\form#126:$(j_1,j_2)$
+\form#127:$\{1, \ldots, N_{\rm r,1} \times \{1, \ldots, N_{\rm r,2}\}$
+\form#128:$(j_1, j_2)$
+\form#129:$ J = K H^2 $
+\form#130:$H$
+\form#131:$ \rm H_2SO_4 $
+\form#132:$K$
+\form#133:\[ | A_1 - A_2 |_2 < \verb+abs_tol+ \]
+\form#134:\[ \frac{| A_1 - A_2 |_2}{| A_1 |_2 + | A_2 |_2} < \verb+rel_tol+ \]
+\form#135:$np \le 10$
+\form#136:$n(1-p) \le 10$
+\form#137:$[0,1)$
+\form#138:$[1,n]$
+\form#139:$e(t)$
+\form#140:$h(t)$
+\form#141:$r(t)$
+\form#142:$c(t)$
+\form#143:\[ c(t) = c(0) + \frac{r t}{h} e. \]
+\form#144:$\lambda(t)$
+\form#145:\[ \lambda_{\rm eff}(t) = \lambda(t) + \frac{\dot{h}(t)}{h(t)} \]
+\form#146:\[ \dot{c}(t) = - \lambda_{\rm eff}(t) c(t). \]
+\form#147:\[ \frac{c(t)}{c(0)} = \frac{h(0)}{h(t)} \exp\left( - \int_0^t \lambda(t)\,dt\right). \]
+\form#148:$p = c(t)/c(0)$
+\form#149:\[ c(t) = p(t) c(0) + (1 - p(t)) b. \]
+\form#150:$\lambda$
+\form#151:\[ p(t) = \min\left(1, \frac{h(0)}{h(t)}\right) \exp(-\lambda t). \]
+\form#152:$m_1 = x_1$
+\form#153:$v_1 = 0$
+\form#154:$n = 1$
+\form#155:$n \ge 2$
+\form#156:\[ m_n = m_{n-1} + \frac{x_n - m_{n-1}}{n} \]
+\form#157:\[ v_n = \frac{n - 2}{n - 1} v_{n-1} + \frac{(x_n - m_{n-1})^2}{n}. \]
+\form#158:$m_n$
+\form#159:$v_n$
+\form#160:$\{x_1,\ldots,x_n\}$
+\form#161:$n$
+\form#162:\[ t_n = \sum_{i=1}^n x_i \]
+\form#163:\[ s_n = \sum_{i=1}^n (x_i - m_n)^2. \]
+\form#164:$m_n = \frac{t_n}{n}$
+\form#165:$p_n = \frac{1}{n} \left( s_n - n m_n^2 \right)$
+\form#166:$v_n = \frac{1}{n - 1} \left( s_n - n m_n^2 \right)$
+\form#167:\[ s_n = \sum_{i=1}^n x_i^2 - n m_n^2 \]
+\form#168:\[ s_n = s_{n-1} + \frac{n - 1}{n} (x_n - m_{n-1})^2. \]
+\form#169:\[ p_n = \frac{n-1}{n} p_{n-1} + \frac{(x_n - m_n)(x_n - m_{n-1})}{n} = \frac{n-1}{n} p_{n-1} + \frac{n-1}{n^2} (x_n - m_{n-1})^2. \]
+\form#170:$s_n$
+\form#171:$n \kappa \epsilon$
+\form#172:$\epsilon$
+\form#173:$\kappa$
+\form#174:\[ \kappa = \frac{\|x\|_2}{\sqrt{s_n}} = \sqrt{1 + \frac{m_n^2}{p_n}} \approx \frac{m_n}{p_n}. \]
+\form#175:$m_{n-1}$
+\form#176:$v_{n-1}$
+\form#177:$x_n$
+\form#178:$\mu$
+\form#179:$\sigma$
+\form#180:$[\mu - r\sigma/\sqrt{n}, \mu + r\sigma/\sqrt{n}]$
+\form#181:$f(\nu) = t_{0.95,\nu}$
+\form#182:$\nu = n - 1$
+\form#183:$g(\nu) = f(\nu) - L$
+\form#184:$L = \Phi^{-1}(0.975)$
+\form#185:$\Phi$
+\form#186:$g'(\nu) < -1$
+\form#187:$g'(\nu) \to -1$
+\form#188:$\nu \to \infty$
+\form#189:$g(\nu)$
+\form#190:$A/\nu$
+\form#191:$g(\nu^*) = A^*/\nu$
+\form#192:$g(\nu) < A^*/\nu$
+\form#193:$\nu > \nu^*$
+\form#194:$f(\nu) \le (f(\nu^*) - L) (\nu^* / \nu) + L$
+\form#195:$\nu \ge \nu^*$
+\form#196:$(\nu^*, f(\nu^*))$
+\form#197:$ \ell_1 $
+\form#198:$ - p \ln p$
+\form#199:$p$
