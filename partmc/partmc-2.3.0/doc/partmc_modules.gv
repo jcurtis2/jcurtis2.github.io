@@ -1,0 +1,126 @@
+digraph partmc_modules {
+    rankdir = TB;
+    node [fontsize = 10, height = 0.3, width = 0.5];
+    graph [nodesep = 0.2, ranksep = 0.3];
+    edge [arrowsize = 0.7];
+    node [shape = box, peripheries = 1, href = "\ref aero_weight.F90"] aero_weight
+    node [shape = box, peripheries = 1, href = "\ref coagulation_dist.F90"] coagulation_dist
+    node [shape = box, peripheries = 1, href = "\ref rand.F90"] rand
+    node [shape = box, peripheries = 1, href = "\ref integer_rmap2.F90"] integer_rmap2
+    node [shape = box, peripheries = 1, href = "\ref coag_kernel.F90"] coag_kernel
+    node [shape = box, peripheries = 1, href = "\ref coag_kernel_zero.F90"] coag_kernel_zero
+    node [shape = box, peripheries = 1, href = "\ref coag_kernel_constant.F90"] coag_kernel_constant
+    node [shape = box, peripheries = 1, href = "\ref netcdf.F90"] netcdf
+    node [shape = box, peripheries = 1, href = "\ref nucleate.F90"] nucleate
+    node [shape = box, peripheries = 1, href = "\ref bin_grid.F90"] bin_grid
+    node [shape = box, peripheries = 1, href = "\ref aero_dist.F90"] aero_dist
+    node [shape = box, peripheries = 1, href = "\ref aero_binned.F90"] aero_binned
+    node [shape = box, peripheries = 1, href = "\ref exact_soln.F90"] exact_soln
+    node [shape = box, peripheries = 2, href = "\ref partmc.F90"] partmc
+    node [shape = box, peripheries = 1, href = "\ref spec_line.F90"] spec_line
+    node [shape = box, peripheries = 1, href = "\ref stats.F90"] stats
+    node [shape = box, peripheries = 1, href = "\ref integer_rmap.F90"] integer_rmap
+    node [shape = box, peripheries = 1, href = "\ref scenario.F90"] scenario
+    node [shape = box, peripheries = 1, href = "\ref spec_file.F90"] spec_file
+    node [shape = box, peripheries = 1, href = "\ref condense.F90"] condense
+    node [shape = box, peripheries = 1, href = "\ref run_sect.F90"] run_sect
+    node [shape = box, peripheries = 1, href = "\ref mosaic.F90"] mosaic
+    node [shape = box, peripheries = 1, href = "\ref coag_kernel_additive.F90"] coag_kernel_additive
+    node [shape = box, peripheries = 1, href = "\ref run_exact.F90"] run_exact
+    node [shape = box, peripheries = 1, href = "\ref coag_kernel_brown.F90"] coag_kernel_brown
+    node [shape = box, peripheries = 1, href = "\ref gas_state.F90"] gas_state
+    node [shape = box, peripheries = 1, href = "\ref aero_state.F90"] aero_state
+    node [shape = box, peripheries = 1, href = "\ref aero_particle.F90"] aero_particle
+    node [shape = box, peripheries = 1, href = "\ref aero_weight_array.F90"] aero_weight_array
+    node [shape = box, peripheries = 1, href = "\ref mpi.F90"] mpi
+    node [shape = box, peripheries = 1, href = "\ref aero_info_array.F90"] aero_info_array
+    node [shape = box, peripheries = 1, href = "\ref util.F90"] util
+    node [shape = box, peripheries = 1, href = "\ref aero_mode.F90"] aero_mode
+    node [shape = box, peripheries = 1, href = "\ref gas_data.F90"] gas_data
+    node [shape = box, peripheries = 1, href = "\ref aero_data.F90"] aero_data
+    node [shape = box, peripheries = 1, href = "\ref constants.F90"] constants
+    node [shape = box, peripheries = 1, href = "\ref integer_varray.F90"] integer_varray
+    node [shape = box, peripheries = 1, href = "\ref run_part.F90"] run_part
+    node [shape = box, peripheries = 1, href = "\ref aero_sorted.F90"] aero_sorted
+    node [shape = box, peripheries = 1, href = "\ref coag_kernel_sedi.F90"] coag_kernel_sedi
+    node [shape = box, peripheries = 1, href = "\ref aero_particle_array.F90"] aero_particle_array
+    node [shape = box, peripheries = 1, href = "\ref coagulation.F90"] coagulation
+    node [shape = box, peripheries = 1, href = "\ref env_state.F90"] env_state
+    node [shape = box, peripheries = 1, href = "\ref output.F90"] output
+    node [shape = box, peripheries = 1, href = "\ref aero_info.F90"] aero_info
+    aero_weight -> aero_particle
+    coagulation_dist -> coagulation
+    rand -> mpi
+    integer_rmap2 -> integer_varray
+    coag_kernel -> coag_kernel_zero
+    coag_kernel -> coag_kernel_sedi
+    coag_kernel -> coag_kernel_constant
+    coag_kernel -> coag_kernel_brown
+    coag_kernel -> coag_kernel_additive
+    coag_kernel_zero -> scenario
+    coag_kernel_constant -> aero_binned
+    netcdf -> rand
+    nucleate -> gas_state
+    nucleate -> aero_state
+    bin_grid -> netcdf
+    bin_grid -> spec_file
+    aero_dist -> aero_mode
+    aero_binned -> aero_dist
+    exact_soln -> coag_kernel
+    partmc -> run_exact
+    partmc -> run_part
+    partmc -> run_sect
+    spec_line -> util
+    stats -> netcdf
+    integer_rmap -> integer_varray
+    scenario -> gas_state
+    scenario -> aero_state
+    spec_file -> spec_line
+    condense -> aero_state
+    run_sect -> coag_kernel
+    run_sect -> output
+    mosaic -> gas_state
+    mosaic -> aero_state
+    coag_kernel_additive -> aero_binned
+    run_exact -> output
+    run_exact -> exact_soln
+    coag_kernel_brown -> aero_particle
+    gas_state -> gas_data
+    gas_state -> env_state
+    aero_state -> aero_sorted
+    aero_state -> aero_weight_array
+    aero_state -> aero_info_array
+    aero_state -> aero_binned
+    aero_particle -> aero_data
+    aero_particle -> env_state
+    aero_weight_array -> aero_weight
+    mpi -> util
+    aero_info_array -> aero_info
+    util -> constants
+    aero_mode -> aero_weight
+    aero_mode -> bin_grid
+    gas_data -> netcdf
+    gas_data -> spec_file
+    aero_data -> netcdf
+    aero_data -> spec_file
+    integer_varray -> mpi
+    run_part -> coagulation_dist
+    run_part -> nucleate
+    run_part -> mosaic
+    run_part -> condense
+    run_part -> output
+    aero_sorted -> aero_particle_array
+    aero_sorted -> integer_rmap2
+    aero_sorted -> integer_rmap
+    aero_sorted -> bin_grid
+    coag_kernel_sedi -> aero_particle
+    aero_particle_array -> aero_particle
+    coagulation -> stats
+    coagulation -> coag_kernel
+    env_state -> netcdf
+    env_state -> spec_file
+    output -> gas_state
+    output -> aero_state
+    aero_info -> mpi
+    aero_info -> spec_file
+}
