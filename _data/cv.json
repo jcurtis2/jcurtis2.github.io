@@ -1,14 +1,14 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
+    "name": "Jeffrey Curtis",
     "email": "jcurtis2@illinois.edu",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "https://jcurtis2.github.io",
+    "summary": "Currently a Research Scientist at the University of Illinois",
     "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "Earth",
+      "address": "1031 W Green St",
+      "postalCode": "61801",
+      "city": "Urbana",
       "countryCode": "US",
       "region": ""
     },
@@ -16,43 +16,43 @@
       {
         "network": "Google Scholar",
         "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+        "url": "https://scholar.google.com/citations?user=NKwQ8sYAAAAJ"
       },
       {
         "network": "ORCID",
         "username": "",
-        "url": "https://orcid.org/yourorcidurl"
+        "url": "https://orcid.org/0000-0002-1447-2127"
       },
       {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "jcurtis2",
+        "url": "https://github.com/jcurtis2"
       }
     ]
   },
   "work": [],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
+      "institution": "University of Illinois Urbana-Champaign",
+      "area": "Ph.D in Atmospheric Sciences",
       "studyType": "",
       "startDate": "",
-      "endDate": "2018",
+      "endDate": "2019",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
+      "institution": "SUNY Brockport",
+      "area": "M.S. in Computational Science",
       "studyType": "",
       "startDate": "",
-      "endDate": "2014",
+      "endDate": "2010",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
+      "institution": "SUNY Brockport",
+      "area": "B.S. in Meteorology",
       "studyType": "",
       "startDate": "",
       "endDate": "2012",
