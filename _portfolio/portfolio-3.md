@@ -1,5 +1,5 @@
 ---
 title: "WRF-PartMC"
-excerpt: "Particle-resolved stochastic atmospheric aerosol model <br/><img src='/images/500x300.png'>"
+excerpt: "Regional scale Particle-resolved stochastic atmospheric aerosol model <br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
