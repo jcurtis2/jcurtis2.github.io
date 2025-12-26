@@ -2,7 +2,7 @@
   "basics": {
     "name": "Jeffrey Curtis",
     "email": "jcurtis2@illinois.edu",
-    "phone": "",
+    "phone_disable": "",
     "website": "https://jcurtis2.github.io",
     "summary": "Currently a Research Scientist at the University of Illinois",
     "location": {
@@ -55,7 +55,7 @@
       "area": "B.S. in Meteorology",
       "studyType": "",
       "startDate": "",
-      "endDate": "2012",
+      "endDate": "2007",
       "gpa": null,
       "courses": []
     }
@@ -64,7 +64,7 @@
   "languages": [],
   "interests": [],
   "references": [],
-  "publications": [
+  "publications_disabled": [
     {
       "name": "Paper Title Number 1",
       "publisher": "Journal 1",
@@ -94,7 +94,7 @@
       "summary": "This paper is about fixing template issue #693."
     }
   ],
-  "presentations": [
+  "presentations_disabled": [
     {
       "name": "Talk 1 on Relevant Topic in Your Field",
       "event": "UC San Francisco, Department of Testing",
@@ -140,7 +140,7 @@
       "description": ""
     }
   ],
-  "portfolio": [
+  "portfolio_disabled": [
     {
       "name": "Portfolio item number 1",
       "category": "portfolio",
