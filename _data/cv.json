@@ -9,8 +9,7 @@
       "address": "1031 W Green St",
       "postalCode": "61801",
       "city": "Urbana",
-      "countryCode": "US",
-      "region": ""
+      "countryCode": "US"
     },
     "profiles": [
       {
@@ -67,6 +66,7 @@
   "publications": [
     {
       "name": "Accelerated simulation of stochastic particle removal processes in particle-resolved aerosol models",
+      "authors": "Jeffrey Curtis",
       "publisher": "Journal of Computational Physics",
       "releaseDate": "2009-10-01",
       "summary": "This paper is about the number 1. The number 2 is left for future work."
