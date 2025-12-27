@@ -63,6 +63,20 @@
   "languages": [],
   "interests": [],
   "references": [],
+
+{
+    "type": "publications",
+    "heading": "Selected Publications",
+    "data": [
+      {
+        "title": "Paper Title",
+        "venue": "Journal Name",
+        "year": "2024",
+        "url": "https://doi.org/..."
+      }
+    ]
+  },
+
   "publications": [
     {
       "name": "Accelerated simulation of stochastic particle removal processes in particle-resolved aerosol models",
