@@ -33,6 +33,50 @@
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
+
+
+{%- comment -%}
+Render authors for a publication.
+Supports:
+- YAML list: post.authors: [ "Alice Smith", "Bob Johnson" ]
+- String:     post.authors: "Alice Smith, Bob Johnson"
+Fallback: post.author
+Optional links via _data/authors.yml or _data/people.yml
+{%- endcomment -%}
+
+{%- assign authors_raw = post.authors | default: post.author -%}
+{%- if authors_raw -%}
+  {%- comment -%}Normalize to an array{%- endcomment -%}
+  {%- if authors_raw contains ',' -%}
+    {%- assign _split = authors_raw | split: ',' -%}
+    {%- assign authors_list = '' | split: '' -%}
+    {%- for a in _split -%}
+      {%- assign authors_list = authors_list | push: a | map: "strip" -%}
+    {%- endfor -%}
+  {%- elsif authors_raw.is_a? Array -%}
+    {%- assign authors_list = authors_raw -%}
+  {%- else -%}
+    {%- assign authors_list = '' | split: '' -%}
+    {%- assign authors_list = authors_list | push: authors_raw -%}
+  {%- endif -%}
+
+  {%- comment -%}Optional linking via _data/authors.yml or _data/people.yml{%- endcomment -%}
+  {%- assign authors_data = site.data.authors | default: site.data.people -%}
+
+  <div class="pub-authors">
+    {%- for author in authors_list -%}
+      {%- assign author_trim = author | strip -%}
+      {%- assign info = authors_data[author_trim] -%}
+      {%- if info and info.url -%}
+        <a href="{{ info.url }}">{{ author_trim }}</a>
+      {%- else -%}
+        {{ author_trim }}
+      {%- endif -%}
+      {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor -%}
+  </div>
+{%- endif -%}
+
     
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
