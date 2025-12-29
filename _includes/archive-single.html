@@ -36,30 +36,28 @@
 
 
    
+
 {%- comment -%}
 Render authors for a publication.
 Supports:
 - YAML list: post.authors: [ "Alice Smith", "Bob Johnson" ]
-- String:     post.authors: "Alice Smith, Bob Johnson"
+- String:     post.authors: "Alice Smith, Bob Johnson" or "... , and Last Author"
 Fallback: post.author
 Optional links via _data/authors.yml or _data/people.yml
 {%- endcomment -%}
 
 {%- assign authors_raw = post.authors | default: post.author -%}
 {%- if authors_raw -%}
-  {%- comment -%}Normalize to an array{%- endcomment -%}
-  {%- if authors_raw contains ',' -%}
-    {%- assign authors_list = authors_raw | split: ',' -%}
+  {%- comment -%}Normalize " and " to a comma, then split{%- endcomment -%}
+  {%- if authors_raw contains ',' or authors_raw contains ' and ' -%}
+    {%- assign normalized = authors_raw | replace: ' and ', ', ' -%}
+    {%- assign authors_list = normalized | split: ',' -%}
   {%- else -%}
-    {%- if authors_raw.respond_to? 'each' -%}
-      {%- comment -%}If Liquid supports `respond_to?`, keep as array; otherwise rely on split fallback{%- endcomment -%}
-      {%- assign authors_list = authors_raw -%}
-    {%- else -%}
-      {%- assign authors_list = authors_raw | split: '|' -%} {# fallback to a 1-item array using harmless split #}
-    {%- endif -%}
+    {%- comment -%}If it's already an array from YAML, use it; otherwise make a one-item array{%- endcomment -%}
+    {%- assign authors_list = authors_raw -%}
   {%- endif -%}
 
-  {%- comment -%}Trim and filter out empties{%- endcomment -%}
+  {%- comment -%}Trim and filter out empty entries{%- endcomment -%}
   {%- assign cleaned = '' | split: '' -%}
   {%- for a in authors_list -%}
     {%- assign name = a | strip -%}
