@@ -35,6 +35,7 @@
     </h2>
 
 
+   
 {%- comment -%}
 Render authors for a publication.
 Supports:
@@ -48,36 +49,44 @@ Optional links via _data/authors.yml or _data/people.yml
 {%- if authors_raw -%}
   {%- comment -%}Normalize to an array{%- endcomment -%}
   {%- if authors_raw contains ',' -%}
-    {%- assign _split = authors_raw | split: ',' -%}
-    {%- assign authors_list = '' | split: '' -%}
-    {%- for a in _split -%}
-      {%- assign authors_list = authors_list | push: a | map: "strip" -%}
-    {%- endfor -%}
-  {%- elsif authors_raw.is_a? Array -%}
-    {%- assign authors_list = authors_raw -%}
+    {%- assign authors_list = authors_raw | split: ',' -%}
   {%- else -%}
-    {%- assign authors_list = '' | split: '' -%}
-    {%- assign authors_list = authors_list | push: authors_raw -%}
+    {%- if authors_raw.respond_to? 'each' -%}
+      {%- comment -%}If Liquid supports `respond_to?`, keep as array; otherwise rely on split fallback{%- endcomment -%}
+      {%- assign authors_list = authors_raw -%}
+    {%- else -%}
+      {%- assign authors_list = authors_raw | split: '|' -%} {# fallback to a 1-item array using harmless split #}
+    {%- endif -%}
   {%- endif -%}
 
-  {%- comment -%}Optional linking via _data/authors.yml or _data/people.yml{%- endcomment -%}
-  {%- assign authors_data = site.data.authors | default: site.data.people -%}
+  {%- comment -%}Trim and filter out empties{%- endcomment -%}
+  {%- assign cleaned = '' | split: '' -%}
+  {%- for a in authors_list -%}
+    {%- assign name = a | strip -%}
+    {%- if name != '' -%}
+      {%- assign cleaned = cleaned | push: name -%}
+    {%- endif -%}
+  {%- endfor -%}
 
-  <div class="pub-authors">
-    {%- for author in authors_list -%}
-      {%- assign author_trim = author | strip -%}
-      {%- assign info = authors_data[author_trim] -%}
-      {%- if info and info.url -%}
-        <a href="{{ info.url }}">{{ author_trim }}</a>
-      {%- else -%}
-        {{ author_trim }}
-      {%- endif -%}
-      {%- unless forloop.last -%}, {% endunless -%}
-    {%- endfor -%}
-  </div>
+  {%- if cleaned.size > 0 -%}
+    {%- comment -%}Optional linking via _data/authors.yml or _data/people.yml{%- endcomment -%}
+    {%- assign authors_data = site.data.authors | default: site.data.people -%}
+
+    <div class="pub-authors">
+      {%- for author in cleaned -%}
+        {%- assign info = authors_data[author] -%}
+        {%- if info and info.url -%}
+          <a href="{{ info.url }}">{{ author }}</a>
+        {%- else -%}
+          {{ author }}
+        {%- endif -%}
+        {%- unless forloop.last -%}, {% endunless -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
 {%- endif -%}
 
-    
+ 
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
